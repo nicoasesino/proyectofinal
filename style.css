@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;;
+}
+a {
+    text-decoration: none;
+}
+.cabezera_global {
+    background-color: rgb(233, 186, 31);
+}
+.cabezera_global_items {
+    display: flex;
+    padding: 20px 0;
+}
+.cabezera_global_items img{
+    width: 80px;
+    border-radius: 50px;
+    margin-left: 100px;
+}
+.cabezera_global_items_links{
+    list-style: none;
+    display: flex;
+    margin-top: 30px;
+    margin: 0 90px;
+    align-items: center;
+}
+.cabezera_global_items_links ul li:hover{
+    border-radius: 50px;
+
+}
+.cabezera_global_items_links a{
+    color: black;
+    margin: 0 90px;
+    font-size: 30px;
+}
+
+.cabezera_global_items_links a:hover{
+    background-color: brown;
+    padding: 10px 10px;
+    border-radius: 30px;
+    color: blue;
+}
