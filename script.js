@@ -23,7 +23,7 @@ for (const producto of juegos) {
         tarjetaProducto.innerHTML = `
         <h3>${producto.nombre}</h3>
         <p>Quedan ${producto.stock} u.</p>
-        <p>Cuesta $${producto.precio}</p>
+        <p>Cuesta $${producto.precio.toFixed(3)}</p>
         <img src=${producto.imgUrl}>
         <br>
         <button>Añadir al carrito</buton>
