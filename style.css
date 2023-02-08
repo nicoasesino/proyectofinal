@@ -54,6 +54,7 @@ a {
     width: 200px;
     height: 300px;
     margin: 10px 100px;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .productos button {
@@ -68,4 +69,10 @@ a {
     flex-direction: column;
     text-align: center;
     
+}
+
+footer {
+    background-color: burlywood;
+    height: 300px;
+    text-align: center;
 }
