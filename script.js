@@ -1,13 +1,40 @@
-let juegos = [{id: 1, nombre: "Minecraft", precio: 19.000, categoria: "sandbox", imgURL: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/1a/MCJE_key_art.jpg/revision/latest/smart/width/250/height/250?cb=20210910122803"},
-            {id: 2, nombre: "GTA V", precio: 19.000, categoria: "survival"},
-            {id: 3, nombre: "Counter Strike Global Ofensive", precio: 19.000, categoria: "shooter"}
+let juegos = [
+    {id: 1, nombre: "Minecraft", precio: 19.000, categoria: "sandbox", imgUrl: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Minecraft-xbox-one.jpg", stock: 15},
+    {id: 2, nombre: "GTA V", precio: 19.000, categoria: "survival", imgUrl: "https://images.g2a.com/1024x768/1x1x0/grand-theft-auto-v-pc-rockstar-key-global-i10000000788017/59e5efeb5bafe304c4426c47", stock: 15},
+    {id: 3, nombre: "Counter Strike GO", precio: 19.000, categoria: "shooter", imgUrl: "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427", stock: 15}
+    ,{id: 1, nombre: "Minecraft", precio: 19.000, categoria: "sandbox", imgUrl: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Minecraft-xbox-one.jpg", stock: 15},
+    {id: 2, nombre: "GTA V", precio: 19.000, categoria: "survival", imgUrl: "https://images.g2a.com/1024x768/1x1x0/grand-theft-auto-v-pc-rockstar-key-global-i10000000788017/59e5efeb5bafe304c4426c47", stock: 15},
+    {id: 3, nombre: "Counter Strike GO", precio: 19.000, categoria: "shooter", imgUrl: "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427", stock: 15}
+    ,{id: 1, nombre: "Minecraft", precio: 19.000, categoria: "sandbox", imgUrl: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Minecraft-xbox-one.jpg", stock: 15},
+    {id: 2, nombre: "GTA V", precio: 19.000, categoria: "survival", imgUrl: "https://images.g2a.com/1024x768/1x1x0/grand-theft-auto-v-pc-rockstar-key-global-i10000000788017/59e5efeb5bafe304c4426c47", stock: 15},
+    {id: 3, nombre: "Counter Strike GO", precio: 19.000, categoria: "shooter", imgUrl: "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427", stock: 15}
 ]
 
 
+let contenedor = document.getElementById("contenedorProductos")
 
-for (const juego of juegos) {
+
+    
+for (const producto of juegos) {
+        let tarjetaProducto = document.createElement("div")
+        tarjetaProducto.className = "productos"
+        tarjetaProducto.id = producto.id
+
+        tarjetaProducto.innerHTML = `
+        <h3>${producto.nombre}</h3>
+        <p>Quedan ${producto.stock} u.</p>
+        <p>Cuesta $${producto.precio}</p>
+        <img src=${producto.imgUrl}>
+        <br>
+        <button>Añadir al carrito</buton>
+      `
+    
+      contenedor.appendChild(tarjetaProducto)
     
 }
+    
+
+
 
 
 

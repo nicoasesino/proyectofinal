@@ -11,12 +11,11 @@ a {
 }
 .cabezera_global_items {
     display: flex;
-    padding: 20px 0;
+    justify-content: center;
 }
 .cabezera_global_items img{
-    width: 80px;
+    width: 50px;
     border-radius: 50px;
-    margin-left: 100px;
 }
 .cabezera_global_items_links{
     list-style: none;
@@ -40,4 +39,32 @@ a {
     background-color: brown;
     border-radius: 100px;
     color: blue;
+}
+
+
+.contenedorProductos{
+    margin: 100px auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.productos img {
+    width: 200px;
+    height: 300px;
+    margin: 10px 100px;
+}
+
+.productos button {
+    font-size: 18px;
+    color: blueviolet;
+}
+
+.productos {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
 }
