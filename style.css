@@ -25,19 +25,19 @@ a {
     margin: 0 90px;
     align-items: center;
 }
-.cabezera_global_items_links ul li:hover{
-    border-radius: 50px;
-
-}
-.cabezera_global_items_links a{
+.text{
+    padding: 10px;
     color: black;
-    margin: 0 90px;
-    font-size: 30px;
+    margin-left: 50px;
+}
+
+.cabezera_global_items_links ul li:hover{
+    border-radius: 10px;
+
 }
 
 .cabezera_global_items_links a:hover{
     background-color: brown;
-    padding: 10px 10px;
-    border-radius: 30px;
+    border-radius: 100px;
     color: blue;
 }

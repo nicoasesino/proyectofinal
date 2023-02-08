@@ -16,5 +16,3 @@ for (const juego of juegos) {
 
 
 
-// let buscadorDeJuegos = juegos.find(juego => juego.id === 2)
-// console.log(buscadorDeJuegos)
