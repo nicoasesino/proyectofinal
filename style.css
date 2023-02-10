@@ -76,3 +76,57 @@ footer {
     height: 300px;
     text-align: center;
 }
+
+.buscadorMaster {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+.buscador {
+    text-align: center;
+    margin-left: 10px;
+}
+
+#contenedorCarrito {
+    display: flex;
+    width: 100%;
+    border: 2px red solid;
+}
+
+.carrito2 img{
+    width: 150px;
+    height: 200px;
+}
+
+.carrito {
+    text-align: center;
+}
+.carrito p {
+    width: 100%;
+}
+
+.carrito2 {
+    margin: 0 10px;
+}
+.total {
+    position: relative;
+    top: 375px;
+    border: 2px rebeccapurple solid;
+    width: 100%;
+    height: 30px;
+    right: 200px;
+    text-align: center;
+    background-color: aqua;
+
+}
+
+.carrito1{
+    margin-bottom: 100px;
+}
+
+.titulo {
+    text-align: center;
+    border: 1px rebeccapurple solid;
+    margin-top: 50px;
+}
