@@ -1,13 +1,10 @@
 let juegos = [
-    {id: 1, nombre: "Minecraft", precio: 19000, categoria: "sandbox", imgUrl: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Minecraft-xbox-one.jpg", stock: 15},
-    {id: 2, nombre: "GTA V", precio: 19000, categoria: "survival", imgUrl: "https://images.g2a.com/1024x768/1x1x0/grand-theft-auto-v-pc-rockstar-key-global-i10000000788017/59e5efeb5bafe304c4426c47", stock: 15},
-    {id: 3, nombre: "Counter Strike GO", precio: 19000, categoria: "shooter", imgUrl: "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427", stock: 15}
-    ,{id: 4, nombre: "Minecraft", precio: 19000, categoria: "sandbox", imgUrl: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Minecraft-xbox-one.jpg", stock: 15},
-    {id: 5, nombre: "GTA V", precio: 19000, categoria: "survival", imgUrl: "https://images.g2a.com/1024x768/1x1x0/grand-theft-auto-v-pc-rockstar-key-global-i10000000788017/59e5efeb5bafe304c4426c47", stock: 15},
-    {id: 6, nombre: "Counter Strike GO", precio: 19000, categoria: "shooter", imgUrl: "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427", stock: 15}
-    ,{id: 7, nombre: "Minecraft", precio: 19000, categoria: "sandbox", imgUrl: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Minecraft-xbox-one.jpg", stock: 15},
-    {id: 8, nombre: "GTA V", precio: 19000, categoria: "survival", imgUrl: "https://images.g2a.com/1024x768/1x1x0/grand-theft-auto-v-pc-rockstar-key-global-i10000000788017/59e5efeb5bafe304c4426c47", stock: 15},
-    {id: 9, nombre: "Counter Strike GO", precio: 19000, categoria: "shooter", imgUrl: "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427", stock: 15}
+  {id: 1, nombre: "Minecraft", precio: 19000, categoria: "sandbox", imgUrl: "https://www.minecraft.net/content/dam/games/minecraft/key-art/Minecraft-xbox-one.jpg", stock: 15},
+  {id: 2, nombre: "GTA V", precio: 19000, categoria: "survival", imgUrl: "https://images.g2a.com/1024x768/1x1x0/grand-theft-auto-v-pc-rockstar-key-global-i10000000788017/59e5efeb5bafe304c4426c47", stock: 15},
+  {id: 3, nombre: "Counter Strike GO", precio: 19000, categoria: "shooter", imgUrl: "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427", stock: 15}
+  ,{id: 4, nombre: "Fifa 23", precio: 19000, categoria: "sandbox", imgUrl: "https://comuesp.com/wp-content/uploads/2022/10/K1PPf4VvIh56fU2vIYM8xR6x-1-1170x658.jpg", stock: 15},
+  {id: 5, nombre: "Call Of Duty", precio: 19000, categoria: "survival", imgUrl: "https://support.activision.com/content/dam/atvi/support/home/modules/tall/MWII-tall-tile.jpg", stock: 15},
+  {id: 6, nombre: "Mortal Combat", precio: 19000, categoria: "shooter", imgUrl: "https://play-lh.googleusercontent.com/FHyo-8OuAN3P6_wJi21bayf8KltZ_ZWpE7n6M5lROrl-U3QeSjvbgi8clOhdaY_M5jY", stock: 15}
 ]
 
 
@@ -86,12 +83,8 @@ function renderizarCarrito(arrayDeProductos) {
   let total = carrito.reduce((acc, valorActual) => acc + valorActual.subtotal, 0)
   contenedorCarrito.innerHTML += `
     <h3 class=total >TOTAL $${total}</h3>
-    <button class=vaciador>Vaciar Carrito</buton>
   `
 }
-
-
-    
 
 
 
