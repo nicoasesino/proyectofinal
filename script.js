@@ -9,10 +9,15 @@ let juegos = [
 
 
 let contenedor = document.getElementById("contenedorProductos")
-let carrito = []
 let contenedorCarrito = document.getElementById("contenedorCarrito")
 
 renderizarProductos(juegos)
+
+let carrito = []
+if (localStorage.getItem("carrito")){
+  carrito = JSON.parse(localStorage.getItem("carrito"))
+}
+renderizarCarrito(carrito)
 
 let buscador = document.getElementById("buscador")
 buscador.addEventListener("input", filtradorJuegos)
@@ -26,12 +31,12 @@ function filtradorJuegos() {
 function renderizarProductos(arrayProductos) {``
 
   contenedor.innerHTML = ""
-  
+
   for (const producto of arrayProductos) {
           let tarjetaProducto = document.createElement("div")
           tarjetaProducto.className = "productos"
           tarjetaProducto.id = producto.id
-  
+
           tarjetaProducto.innerHTML = `
           <h3>${producto.nombre}</h3>
           <p>Quedan ${producto.stock} u.</p>
@@ -40,9 +45,9 @@ function renderizarProductos(arrayProductos) {``
           <br>
           <button class=boton id=${producto.id} >Añadir al carrito</buton>
         `
-      
+
         contenedor.appendChild(tarjetaProducto)
-      
+
   }
   let botones = document.getElementsByClassName("boton")
   for (const boton of botones) {
@@ -57,10 +62,11 @@ function agregarAlCarrito(e) {
   if (posicionDelProductoBuscado != -1) {
     carrito[posicionDelProductoBuscado].unidades++
     carrito[posicionDelProductoBuscado].subtotal = carrito[posicionDelProductoBuscado].unidades * carrito[posicionDelProductoBuscado].precioUnitario
-  } 
+  }
   else {
     carrito.push({id: productoBuscado.id, imgUrl: productoBuscado.imgUrl, nombre: productoBuscado.nombre, precioUnitario: productoBuscado.precio, unidades: 1, subtotal: productoBuscado.precio})
   }
+  localStorage.setItem("carrito", JSON.stringify(carrito))
   renderizarCarrito(carrito)
 }
 
@@ -70,7 +76,7 @@ function renderizarCarrito(arrayDeProductos) {
     contenedorCarrito.innerHTML += `
       <div class="carrito1">
           <div class="carrito2">
-            <p>${producto.nombre}</p>
+            <h3>${producto.nombre}</h3>
             <img src=${producto.imgUrl}>
             <p>Precio: ${producto.precioUnitario}</p>
             <p>Cantida: ${producto.unidades}</p>
@@ -86,7 +92,20 @@ function renderizarCarrito(arrayDeProductos) {
   `
 }
 
+let comprar = document.getElementById("comprar")
 
+comprar.addEventListener("click", () => {
+  localStorage.removeItem("carrito")
+  carrito = []
+  renderizarCarrito(carrito)
+})
 
+let vaciador = document.getElementById("vaciador")
 
+vaciador.addEventListener("click", vaciadorCarrito)
 
+function vaciadorCarrito() {
+  carrito = []
+  renderizarCarrito(carrito)
+  
+}
