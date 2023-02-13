@@ -68,10 +68,11 @@ function agregarAlCarrito(e) {
   }
   localStorage.setItem("carrito", JSON.stringify(carrito))
   renderizarCarrito(carrito)
-  swal({
-    title: "Muy Bien",
-    text: "Has agregado el producto al carrito correctamente",
-    icon: "success",
+  Swal.fire({
+    text: 'Has agregado el producto correctamente',
+    icon: 'success',
+    showConfirmButton: false,
+    timer: 1000
   });
 }
 
@@ -112,10 +113,22 @@ vaciador.addEventListener("click", vaciadorCarrito)
 function vaciadorCarrito() {
   carrito = []
   renderizarCarrito(carrito)
-  swal({
-    title: "Muy bien",
-    text: "Se ha eliminado todos los productos de tu carrito",
-    icon: "success",
-  });
+  Swal.fire({
+    title: 'Esta seguro?',
+    text: "Debera volver a agregar sus productos nuevamente!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Si, Vaciar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Carrito Vaciado',
+        'Tus productos fueron eliminados.',
+        'success'
+      )
+    }
+  })
 }
 
