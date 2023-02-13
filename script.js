@@ -68,6 +68,11 @@ function agregarAlCarrito(e) {
   }
   localStorage.setItem("carrito", JSON.stringify(carrito))
   renderizarCarrito(carrito)
+  swal({
+    title: "Muy Bien",
+    text: "Has agregado el producto al carrito correctamente",
+    icon: "success",
+  });
 }
 
 function renderizarCarrito(arrayDeProductos) {
@@ -107,5 +112,10 @@ vaciador.addEventListener("click", vaciadorCarrito)
 function vaciadorCarrito() {
   carrito = []
   renderizarCarrito(carrito)
-  
+  swal({
+    title: "Muy bien",
+    text: "Se ha eliminado todos los productos de tu carrito",
+    icon: "success",
+  });
 }
+
